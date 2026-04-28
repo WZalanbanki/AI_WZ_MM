@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Eszközök – Fedezd fel a legjobb mesterséges intelligencia megoldásokat</title>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="nav-logo">AI Eszközök</div>
+      <ul class="nav-links">
+        <li><a href="#" class="active">Főoldal</a></li>
+        <li><a href="#eszkozok">Eszközök</a></li>
+        <li><a href="#tortenet">Történet</a></li>
+        <li><a href="ai.html" target="_blank">ChatBot</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <div class="hero-badge">Kurátor AI gyűjtemény</div>
+        <h1>A legjobb <span>AI eszközök</span><br>egy helyen</h1>
+        <p>Fedezd fel és hasonlítsd össze a legnépszerűbb mesterséges intelligencia megoldásokat. Szűrj kategória, ár és értékelés szerint.</p>
+        <div class="search-wrap">
+          <input type="text" id="searchInput" placeholder="Keress AI eszközök között…" autocomplete="off">
+          <svg class="search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="11" cy="11" r="8"/>
+            <path d="m21 21-4.35-4.35"/>
+          </svg>
+        </div>
+        <div class="search-count" id="searchCount"></div>
+      </div>
+    </section>
+    <section>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8">
+            <div class="filter-row" id="filterRow">
+              <button class="chip active" data-filter="all">Összes</button>
+              <button class="chip" data-filter="ingyenes">Ingyenes</button>
+              <button class="chip" data-filter="fizetős">Fizetős</button>
+              <button class="chip" data-filter="freemium">Freemium</button>
+              <button class="chip" data-filter="szöveg">Szöveg</button>
+              <button class="chip" data-filter="kép">Kép</button>
+              <button class="chip" data-filter="kód">Kód</button>
+              <button class="chip" data-filter="hang">Hang</button>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-inner">
+                <div class="carousel-item active" data-bs-interval="10000">
+                  <img src="..." class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item" data-bs-interval="2000">
+                  <img src="..." class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                  <img src="..." class="d-block w-100" alt="...">
+                </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+  
+    <section class="grid-section" id="eszkozok">
+      <div class="container">
+      <div class="section-title">Összes eszköz</div>
+      <div class="cards-grid" id="cardsGrid"></div>
+      <div class="no-results" id="noResults">
+        Nem találtunk egyező AI eszközt. Próbálj más keresési feltételt! 🔍
+      </div>
+      </div>
+    </section>
+  
+    <section class="history-section" id="tortenet">
+      <div class="section-title">Részletes leírások</div>
+      <div class="history-grid" id="historyGrid"></div>
+    </section>
+  </main>
+  
+
+  <footer>
+    <p>Készítve a legjobb <span>AI eszközök</span> bemutatásához · 2024</p>
+  </footer>
+
+  <button id="chatbot-btn" aria-label="Chatbot megnyitása"></button>
+
+  <div id="chatbot-window" role="dialog" aria-label="AI Segéd">
+    <div class="chat-header">
+      <div class="chat-avatar"></div>
+      <div class="chat-header-info">
+        <div class="chat-header-name">AI Segéd</div>
+        <div class="chat-status">
+          <span class="status-dot"></span> Online
+        </div>
+      </div>
+      <button class="chat-close" id="chatClose" aria-label="Bezárás">X</button>
+    </div>
+    <div class="chat-messages" id="chatMessages"></div>
+    <div class="chat-questions">
+      <div class="chat-q-label">Válassz egy kérdést</div>
+      <div id="chatQuestions"></div>
+    </div>
+  </div>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
